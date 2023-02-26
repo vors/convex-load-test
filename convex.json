@@ -1,7 +1,7 @@
 {
-  "project": "convex-load-test",
+  "project": "convex-load-test-bb419",
   "team": "vors",
-  "prodUrl": "https://spotted-hawk-13.convex.cloud",
+  "prodUrl": "https://aware-chinchilla-283.convex.cloud",
   "functions": "convex/",
   "authInfo": []
 }

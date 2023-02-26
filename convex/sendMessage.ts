@@ -5,10 +5,13 @@ function getRandomInt(max: number) {
 }
 
 export default mutation(async ({ db }, body, author) => {
-  const message = { body, author, randomNumber: getRandomInt(10) };
   await Promise.all(
     [...Array(8000).keys()].map((i) => {
-      return db.insert("messages", message);
+      return db.insert("messages", {
+        body,
+        author,
+        randomNumber: getRandomInt(300),
+      });
     })
   );
 });

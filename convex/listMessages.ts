@@ -4,7 +4,8 @@ import { query } from "./_generated/server";
 export default query(async ({ db }) => {
   const messages = await db
     .query("messages")
-    .filter((q) => q.eq(q.field("randomNumber"), 1))
+    .withIndex("by_randomNumber")
+    .filter((q) => q.eq(q.field("randomNumber"), 123))
     .collect();
   return messages.length;
 });
